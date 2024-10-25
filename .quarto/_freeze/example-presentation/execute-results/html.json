@@ -1,0 +1,21 @@
+{
+  "hash": "c38b8453207e9b1d70b5344abe3149d9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Example Presentation\"\ntitle-slide-attributes: \n  data-background-image: minimalism-mountains.jpg\nauthor: Simeon Ng\nformat:\n  revealjs:\n    logo: dec-logo-web.png\n    theme: [default, dectheme.scss]\n    css: logo.css\n---\n\n\n\n# Test {background-image=\"minimalism-mountains.jpg\"}\n\n## Another Test\n\n:::{.incremental}\n- Bullet points here\n- Another bullet point\n- Press 'S' key to open speaker view\n:::\n\n:::{.notes}\n- Here are some notes.<br>\n- I can make a new line with a break tag\n- New Line\n:::\n\n## Another Test\n\n::::{.columns}\n\n:::{.column width=\"50%\"}\n- Column 1\n:::\n\n:::{.column width=\"50%\"}\n- Column 2\n:::\n\n::::\n\n## More Testing\n\n\n::: {.cell}\n\n```{.r .cell-code}\na <- 2\nb <- 5\na + b\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 7\n```\n\n\n:::\n:::\n\n\n\n## Even More Testing\n\n![](dec-logo-web.png){.absolute top=200 left=0 .fragment .fade-in-then-out}\n![](dec-logo-web.png){.absolute bottom=0 right=50 .fragment .fade-in-then-out}\n",
+    "supporting": [
+      "example-presentation_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

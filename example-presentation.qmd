@@ -1,0 +1,54 @@
+---
+title: "Example Presentation"
+title-slide-attributes: 
+  data-background-image: minimalism-mountains.jpg
+author: Simeon Ng
+format:
+  revealjs:
+    logo: dec-logo-web.png
+    theme: [default, dectheme.scss]
+    css: logo.css
+---
+
+# Test {background-image="minimalism-mountains.jpg"}
+
+## Another Test
+
+:::{.incremental}
+- Bullet points here
+- Another bullet point
+- Press 'S' key to open speaker view
+:::
+
+:::{.notes}
+- Here are some notes.<br>
+- I can make a new line with a break tag
+- New Line
+:::
+
+## Another Test
+
+::::{.columns}
+
+:::{.column width="50%"}
+- Column 1
+:::
+
+:::{.column width="50%"}
+- Column 2
+:::
+
+::::
+
+## More Testing
+```{r}
+#| echo: true
+a <- 2
+b <- 5
+a + b
+```
+
+## Even More Testing
+
+![](dec-logo-web.png){.absolute top=200 left=0 .fragment .fade-in-then-out}
+![](dec-logo-web.png){.absolute bottom=0 right=50 .fragment .fade-in-then-out}

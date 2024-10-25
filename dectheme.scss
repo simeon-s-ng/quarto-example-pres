@@ -1,0 +1,19 @@
+/*-- scss:defaults --*/
+
+// Include Open Sans font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// fonts
+$font-family-sans-serif: "Open Sans", serif !default;
+
+// colors
+$body-bg: #F7F5F2 !default;
+$body-color: #194A6B !default;
+$link-color: #191a6b !default;
+$selection-bg: #26351c !default;
+
+// headings
+$presentation-heading-font: "Open Sans", serif !default;
+$presentation-heading-color: #194A6B !default;
+
+/*-- scss:rules --*/
